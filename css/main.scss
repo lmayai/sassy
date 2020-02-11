@@ -7,6 +7,11 @@ html, body {
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
+  
+  @media (orientation: landscape)  {
+    height: auto;
+    background-color: setColor(primary);
+  }
 
   #bg {
     // https://bennettfeely.com/clippy/
@@ -19,6 +24,10 @@ body {
   
     @include desktop {
       clip-path: polygon(82% 0, 54% 100%, 0 100%, 0 0);
+    }
+    
+    @media (orientation: landscape)  {
+      clip-path: none;
     }
   }
 }
@@ -115,7 +124,7 @@ main {
       display: block;
       border-radius: $borders;
       background-color: setColor(accent);
-      margin: $margin*2 auto 0 auto;
+      margin: $margin*2 auto $margin*2 auto;
       padding: $padding;
       width: 80%;
       color: setColor(dark-blue);

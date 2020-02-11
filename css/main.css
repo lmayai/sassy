@@ -7,6 +7,13 @@ body {
   margin: 0;
 }
 
+@media (orientation: landscape) {
+  body {
+    height: auto;
+    background-color: #005DFF;
+  }
+}
+
 body #bg {
   -webkit-clip-path: polygon(100% 0, 100% 73%, 50% 100%, 0 100%, 0 0);
           clip-path: polygon(100% 0, 100% 73%, 50% 100%, 0 100%, 0 0);
@@ -21,6 +28,13 @@ body #bg {
   body #bg {
     -webkit-clip-path: polygon(82% 0, 54% 100%, 0 100%, 0 0);
             clip-path: polygon(82% 0, 54% 100%, 0 100%, 0 0);
+  }
+}
+
+@media (orientation: landscape) {
+  body #bg {
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }
 
@@ -127,7 +141,7 @@ main section#hero a {
   display: block;
   border-radius: 15px;
   background-color: #FFF6BB;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 30px auto;
   padding: 15px;
   width: 80%;
   color: #001333;
