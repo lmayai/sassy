@@ -1,0 +1,18 @@
+$myColor: #005DFF;
+
+$padding: 15px;
+$margin: 15px;
+$borders: 15px;
+
+$colors: (
+  primary: #005DFF,
+  accent: #FFF6BB,
+  light-blue: lighten( #005DFF, 40%),
+  dark-blue: darken( #005DFF, 40%),
+  white: #FFF,
+  dark-white: darken(#FFF, 10%),
+);
+
+@function setColor($color-name) {
+  @return map-get($colors, $color-name)
+}
