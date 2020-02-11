@@ -17,13 +17,30 @@ body #bg {
   z-index: -1;
 }
 
-body header a {
+@media (min-width: 840px) {
+  body #bg {
+    -webkit-clip-path: polygon(82% 0, 54% 100%, 0 100%, 0 0);
+            clip-path: polygon(82% 0, 54% 100%, 0 100%, 0 0);
+  }
+}
+
+header a {
   text-decoration: none;
   color: #FFF;
   font-size: 2em;
   padding: 15px;
   display: block;
   text-transform: uppercase;
+}
+
+@media (min-width: 840px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "hero card";
+  }
 }
 
 main section#card {
@@ -35,6 +52,19 @@ main section#card {
   padding: 15px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 840px) {
+  main section#card {
+    grid-area: card;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 1em;
+  }
 }
 
 main section#card ul {
@@ -69,6 +99,14 @@ main section#hero {
   text-align: center;
 }
 
+@media (min-width: 840px) {
+  main section#hero {
+    grid-area: hero;
+    text-align: left;
+    margin: 4em 0 0 4em;
+  }
+}
+
 main section#hero h1 {
   margin: 0 auto;
   color: #FFF;
@@ -89,11 +127,18 @@ main section#hero a {
   display: block;
   border-radius: 15px;
   background-color: #FFF6BB;
-  margin: 15px auto 0 auto;
+  margin: 30px auto 0 auto;
   padding: 15px;
   width: 80%;
   color: #001333;
   text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  main section#hero a {
+    margin: 30px 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
