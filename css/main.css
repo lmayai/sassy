@@ -79,7 +79,9 @@ header .container .inner span {
   float: right;
   font-weight: bold;
   margin-right: 9px;
-  position: relative;
+  position: absolute;
+  top: 12px;
+  right: 12px;
   -webkit-transition: display .5s;
   transition: display .5s;
 }

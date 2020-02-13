@@ -52,8 +52,8 @@ header {
     // background-color: setColor(accent);
     border-radius: $borders;
     
+    
     .inner {
-      //max-width: 50%;
       background-color: setColor(accent);
       padding: $padding;
       border-radius: $borders;
@@ -70,7 +70,9 @@ header {
         float: right;
         font-weight: bold;
         margin-right: 9px;
-        position: relative;
+        position: absolute;
+        top: 12px;
+        right: 12px;
         transition: display .5s;
       }
 
