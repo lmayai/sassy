@@ -40,11 +40,61 @@ body #bg {
 
 header a {
   text-decoration: none;
-  color: #FFF;
-  font-size: 2em;
-  padding: 15px;
   display: block;
+}
+
+header a.logo {
+  font-size: 2em;
+  color: #FFF;
+  padding: 15px;
   text-transform: uppercase;
+}
+
+header .container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+header .container .inner {
+  background-color: #FFF6BB;
+  padding: 15px;
+  border-radius: 15px;
+  -webkit-clip-path: circle(10% at 92% 25%);
+          clip-path: circle(10% at 92% 25%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+header .container .inner:hover {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+  background-color: #ccdfff;
+}
+
+header .container .inner span {
+  float: right;
+  font-weight: bold;
+  margin-right: 9px;
+  position: relative;
+  -webkit-transition: display .5s;
+  transition: display .5s;
+}
+
+header .container .inner:hover span {
+  display: none;
+}
+
+header .container .inner h1 {
+  margin: 0;
+  font-size: 1.6em;
+}
+
+header .container .inner p {
+  font-size: 0.8em;
 }
 
 @media (min-width: 840px) {
